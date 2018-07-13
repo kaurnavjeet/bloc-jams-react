@@ -54,6 +54,7 @@ class Album extends Component {
       this.setState({
         hoveringSong: song,
       })
+  }
 
   hoverOff() {
     this.setState({
