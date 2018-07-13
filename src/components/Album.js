@@ -54,7 +54,6 @@ class Album extends Component {
       this.setState({
         hoveringSong: song,
       })
-  }
 
   hoverOff() {
     this.setState({
@@ -63,7 +62,7 @@ class Album extends Component {
   }
 
   togglePlay(song, index) {
-     return (
+    return (
       this.state.isPlaying && this.state.currentSong === song ? <td><span className="ion-md-pause"></span></td>
       : this.state.hoveringSong === index + 1 ? <td><span className="ion-md-play"></span></td>
       : <td>{index + 1}</td>
