@@ -63,18 +63,11 @@ class Album extends Component {
   }
 
   togglePlay(song, index) {
-    const play = this.state.isPlaying
-    const thisSong = this.state.currentSong
-    const hover = this.state.hoveringSong
-
-
-    if (play && thisSong === song) {
-      return <td><span className="ion-md-pause"></span></td>
-    } else if (hover === index + 1) {
-      return <td><span className="ion-md-play"></span></td>
-    } else if (!hover){
-      return <td><span className="index">{index + 1}</span></td>
-    }
+     return (
+      this.state.isPlaying && this.state.currentSong === song ? <td><span className="ion-md-pause"></span></td>
+      : this.state.hoveringSong === index + 1 ? <td><span className="ion-md-play"></span></td>
+      : <td>{index + 1}</td>
+    )
   }
 
 
