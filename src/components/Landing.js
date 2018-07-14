@@ -1,8 +1,13 @@
 import React from 'react'
 
 const Landing = () => (
+<div className="background">
   <section className="landing">
-    <h1 className="hero-title">Turn the music up</h1>
+    <div className="title">
+      <h1 className="hero-title">Turn the music up</h1>
+      <div className="diamond"></div>
+    </div>
+
 
     <section className="selling-point">
       <div className="point">
@@ -19,6 +24,7 @@ const Landing = () => (
       </div>
     </section>
   </section>
+</div>
 )
 
 export default Landing;
