@@ -15,7 +15,7 @@ class App extends Component {
         <div className="header">
           <header>
             <div className="logo">
-              <h1>Bloc <span>Jams</span></h1>
+              <h1>bloc<span>jams</span></h1>
             </div>
             <div className="navBar">
               <nav>

@@ -1,11 +1,14 @@
 import React from 'react'
 
 const Landing = () => (
-<div className="background">
   <section className="landing">
     <div className="title">
-      <h1 className="hero-title">Turn the music up</h1>
-      <div className="diamond"></div>
+      <div className="music-title">
+        <h1 className="hero-title">Turn the music up</h1>
+        <div className="slider left"></div>
+        <div className="slider right"></div>
+        <div className="diamond"></div>
+      </div>
     </div>
 
 
@@ -24,7 +27,6 @@ const Landing = () => (
       </div>
     </section>
   </section>
-</div>
 )
 
 export default Landing;
