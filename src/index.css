@@ -1,155 +1,109 @@
 body {
+  font: 15px/1.5 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background: url(./music-stock.png);
 }
 
+/* Global */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
 
+nav .nav {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
 header {
   background-color: #000;
-  position: fixed;
-  top: 0;
-  height: 100px;
-  width: 100%;
-  z-index: 500;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #c3121c 3px solid;
 }
 
-div {
-  display: block;
-}
-
-.logo {
-  float: left;
-  margin-left: 90px;
-  margin-top: 40px;
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
-  color: #c3121c;
-  line-height: 25px;
-  text-transform: uppercase;
-}
-
-.logo span {
-  color: #fff;
-}
-
-.navBar {
-  float: right;
-  margin-right: 90px;
-  margin-top: 40px;
-}
-
-.nav {
-  padding: 7px 14px;
-  margin: 24px 2px 0 2px;
-  line-height: 6.2em;
-  position: relative;
-  border: 2px solid #000;
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: 'Open Sans';
-  font-weight: bold;
+nav .nav {
+  color: #ffffff;
   text-decoration: none;
-  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  float: right;
+  padding: 0 20px 0 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+header #logo {
+  float: left;
+}
+
+header #logo h1 {
+  margin: 0;
+}
+
+#logo .highlight {
+  color: #c3121c;
 }
 
 .nav:hover {
-  border-color: #c3121c;
+  border: #c3121c 2px solid;
 }
 
 .nav:focus {
-  border-color: #c3121c;
+  border: #c3121c 2px solid;
 }
 
-.landing {
-  color: #fff;
-  content: '';
-  background: url(./music-stock.png);
-  opacity: 0.7;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/* Landing */
 
-.head-title {
-  width: 800px;
-  height: 100%;
-  margin: auto;
-  position: relative;
+#landing {
   text-align: center;
-  z-index: 1;
 }
 
-.music-title {
-  top: 39%;
-  position: absolute;
-  width: 100%;
-}
-
-.hero-title {
-  font-size: 3em;
-  text-transform: uppercase;
-
-}
-
-.diamond {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  position: absolute;
-  left: 395px;
-  top: 100px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+.slogan .hero-title {
+  margin-top: 150px;
+  font-size: 40px;
+  margin-bottom: 1px;
+  color: #ffffff;
 }
 
 .slider {
-  background: #c3121c;
-  width: 250px;
+  width: 310px;
   height: 3px;
-  position: absolute;
-  top: 109px;
-}
-
-.slider.left{
-  left: 305px;
-}
-
-.slider.right {
-  right: 295px;
+  background: #c3121c;
+  margin-bottom: 10px;
+  margin-left: 38%;
 }
 
 .selling-point {
-  position: relative;
-  top: 150px;
-  height: 100%;
+  margin-top: 50px;
+}
+
+.selling-point .container {
   width: 100%;
+  margin-left: 30px;
 }
 
-.point-left{
-  top: -325px;
-  width: 33%;
+.selling-point .point {
   float: left;
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+
 }
 
-.point-center {
-  top: -325px;
-  width: 33%;
-  float: none;
+.point-title {
+  color: #ffffff;
+  font-weight: bold;
 }
 
-.point-right {
-  top: -325px;
-  width: 33%;
-  float: right;
+.point-description {
+  color: #cccccc;
+  font-weight: bold;
 }
-
 
 
 

@@ -11,20 +11,18 @@ import Album from './components/Album'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="header">
-          <header>
-            <div className="logo">
-              <h1>bloc<span>jams</span></h1>
-            </div>
-            <div className="navBar">
-              <nav>
-                <Link to='/' className="nav">Landing</Link>
-                <Link to='/library' className="nav">Library</Link>
-              </nav>
-            </div>
-          </header>
+    <div className="App">
+      <header>
+        <div class="container">
+          <div id="logo">
+            <h1><span className="highlight">Bloc</span>jams</h1>
+          </div>
+          <nav>
+            <Link to='/' className="nav">Landing</Link>
+            <Link to='/library' className="nav">Library</Link>
+          </nav>
         </div>
+      </header>
 
         <main>
           <Route exact path='/' component={Landing} />
@@ -32,7 +30,7 @@ class App extends Component {
           <Route path='/album/:slug' component={Album} />
         </main>
       </div>
-    );
+    )
   }
 }
 
