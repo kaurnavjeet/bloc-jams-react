@@ -109,10 +109,10 @@ class Album extends Component {
   }
 
   formatTime (time) {
-    const seconds = (Math.floor(time%60))
+    const seconds = Math.floor(time%60)
     const minutes = Math.floor(time/60)
     return (
-      typeof(time) !== 'number' ? '-:--'
+      isNaN(time) ? '-:--'
       : seconds < 10 ? minutes.toString() + ":0" + seconds.toString()
       : minutes.toString() + ":" + seconds.toString()
     )
@@ -174,7 +174,7 @@ class Album extends Component {
 
                 {this.togglePlay(song, index)}
                 <td>{song.title}</td>
-                <td>{song.duration} seconds</td>
+                <td>{this.formatTime(song.duration)}</td>
               </tr>
             )}
           </tbody>
