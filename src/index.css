@@ -62,30 +62,31 @@ div {
   border-color: #c3121c;
 }
 
-
 .landing {
-  background-image: url(./music-stock.png);
-  overflow: hidden;
-  opacity: 0.5;
+  color: #fff;
+  content: '';
+  background: url(./music-stock.png);
+  opacity: 0.7;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  color: #fff;
-  z-index: 10;
+  left: 0;
 }
 
-.title {
+.head-title {
   width: 800px;
   height: 100%;
   margin: auto;
   position: relative;
   text-align: center;
+  z-index: 1;
 }
 
 .music-title {
   top: 39%;
   position: absolute;
+  width: 100%;
 }
 
 .hero-title {
@@ -97,10 +98,10 @@ div {
 .diamond {
   width: 20px;
   height: 20px;
-  background-color: #c3121c;
+  background-color: #fff;
   position: absolute;
-  left: 49%;
-  top: 18%;
+  left: 395px;
+  top: 100px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -110,19 +111,55 @@ div {
 
 .slider {
   background: #c3121c;
-  width: 130px;
+  width: 250px;
   height: 3px;
   position: absolute;
-  top: 40px;
+  top: 109px;
 }
 
-.slider .left{
-  left: 0;
+.slider.left{
+  left: 305px;
 }
 
-.slider .right {
-  right: 0;
+.slider.right {
+  right: 295px;
 }
+
+.selling-point {
+  position: relative;
+  top: 150px;
+  height: 100%;
+  width: 100%;
+}
+
+.point-left{
+  top: -325px;
+  width: 33%;
+  float: left;
+}
+
+.point-center {
+  top: -325px;
+  width: 33%;
+  float: none;
+}
+
+.point-right {
+  top: -325px;
+  width: 33%;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
