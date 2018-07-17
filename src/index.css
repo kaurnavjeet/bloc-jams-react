@@ -105,7 +105,10 @@ header .nav:focus {
 
 /* Library */
 .library {
-  background: radial-gradient(#979797, #A0A0A0);
+  background: url(./music3.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -114,21 +117,40 @@ header .nav:focus {
 }
 
 .albumLink {
-  flex-direction: row;
   text-decoration: none;
   color: #212121;
   font-size: 20px;
-  padding: 0px 50px;
-  width: 50vw;
+  font-weight: 550;
+  width: 100vh;
+  /*box-shadow: 5px 0 0 rgba(175, 7, 12,0.2);*/
 }
 
-/*.albumCover {
-  width: 500px;
-}*/
+.albumLink img:hover {
+  box-shadow: 5px 0 0 rgba(175, 7, 12, 0.4);
+}
 
+.albumLink div:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(175, 7, 12, 0.4);
+}
 .library img {
-  width: 250px;
-  box-shadow: 0 5px 0 rgba(175, 7, 12,0.2);
+  width: 200px;
+  box-shadow: 5px 5px 5px rgba(33, 33, 33, 0.4);
+}
+
+.library div {
+  line-height: 1.4rem;
+}
+
+.library div:first-of-type {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #E8E8E8;
+}
+
+.library div:last-of-type {
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
  /* Media Queries */
@@ -164,6 +186,7 @@ header .nav:focus {
   header nav {
     padding-left: 50px;
   }
+
 }
 
 
