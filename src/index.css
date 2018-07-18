@@ -90,7 +90,7 @@ header .nav:focus {
 }
 
 .selling-point h2 {
-  color:#212121;
+  color: #212121;
   font-size: 1.5rem;
   font-weight: bold;
   box-shadow: 0 5px 0 rgba(175, 7, 12,0.2);
@@ -109,10 +109,10 @@ header .nav:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
@@ -122,7 +122,7 @@ header .nav:focus {
   font-size: 20px;
   font-weight: 550;
   width: 100vh;
-  /*box-shadow: 5px 0 0 rgba(175, 7, 12,0.2);*/
+  box-shadow: 5px 0 0 rgba(175, 7, 12,0.2);
 }
 
 .albumLink img:hover {
@@ -140,6 +140,7 @@ header .nav:focus {
 
 .library div {
   line-height: 1.4rem;
+  
 }
 
 .library div:first-of-type {
@@ -162,11 +163,10 @@ header .nav:focus {
   }
   
   .landing {
-    flex-direction: row;
-    align-items: center;
     padding: 30px;
     flex-wrap: wrap;
     height: 100%;
+    background-size: auto;
   }
 
   .selling-point {
@@ -175,16 +175,18 @@ header .nav:focus {
     justify-content: center;
   }
 
-  .landing h1 {
-    margin-top: 250px;
-  }
-
   header h1 {
     padding-right: 20px;
   }
 
   header nav {
     padding-left: 50px;
+  }
+
+  .library {
+    flex-wrap: wrap;
+    height: 100%;
+    background-size: auto;
   }
 
 }
