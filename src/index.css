@@ -10,7 +10,7 @@ body {
 }
 
 /* Header */
-header {
+ header {
   background-color: #000;
   color: #ffffff;
   min-height: 70px;
@@ -53,19 +53,32 @@ header .nav:focus {
 
 /* Landing */
 
-.landing {
-  background: url(./music3.jpeg);
+ .landing {
+  /* background: url(./music3.jpeg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex: 0 1 auto;
+  background-repeat: no-repeat; */
   height: 100vh;
+  display: grid;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  align-items: center;
+  align-items: center; */
 }
+
+/* .landing .bg-image {
+  display: block;
+  position: absolute;
+  background: #333 url('./music3.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+} */
 
 .landing h1 {
   font-size: 50px;
@@ -105,17 +118,24 @@ header .nav:focus {
 
 /* Library */
 .library {
-  background: url(./music3.jpeg);
+  /* background: url(./music3.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100vh; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
+/* .library .bg-image {
+  background: #333 url(./music3.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} */
 .albumLink {
   text-decoration: none;
   color: #212121;
@@ -151,7 +171,7 @@ header .nav:focus {
 .library div:last-of-type {
   font-size: 1rem;
   text-transform: capitalize;
-}
+}  */
 
 .album {
   background: url(./music3.jpeg);
@@ -163,12 +183,6 @@ header .nav:focus {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(30vh, auto);
   grid-gap: 2em;
-  
-  
-
-  /*flex-direction: column;
-  justify-content: center;
-  align-items: center;*/
 }
 
 .album-info {
@@ -176,6 +190,7 @@ header .nav:focus {
   grid-row: 1/3;
   grid-column: 1/3;
   align-self: end;
+  height: 
 }
 
 #album-cover-art {
@@ -195,15 +210,17 @@ header .nav:focus {
 
 #song-list {
   justify-self: center;
-}
+} 
+
+
 
 .player-bar {
   justify-self: center;
-}
+} 
 
 
  /* Media Queries */
-@media all and (max-width: 600px) {
+ @media all and (max-width: 600px) {
   header {
     flex-direction: column;
     align-content: center;
@@ -237,7 +254,7 @@ header .nav:focus {
     background-size: auto;
   }
 
-}
+} 
 
 
 

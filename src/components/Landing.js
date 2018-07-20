@@ -3,6 +3,8 @@ import React from 'react'
 const Landing = () => (
   <section className="landing">
 
+    <div class="bg-image"></div>
+
      
         <h1 className="hero-title">Turn the music up</h1>
      
