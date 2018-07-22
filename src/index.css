@@ -104,11 +104,14 @@ header .nav:focus {
   width: 100%;
 }
 
+.svg-inline--fa {
+  color: rgba(175, 7, 12, 0.5);
+}
 .selling-point h2 {
   color: #fff;
+  text-shadow: 0 0 5px rgba(33, 33, 33, 0.9);
   font-size: 1.5rem;
   font-weight: bold;
-  box-shadow: 0 5px 0 rgba(175, 7, 12, 0.502);
 }
 
 .selling-point p {
@@ -116,6 +119,7 @@ header .nav:focus {
   font-weight: 800;
   font-size: 1.1rem;
   padding-top: 10px;
+  height: 100%;
 }
 
 /* Library */
@@ -157,6 +161,7 @@ header .nav:focus {
   text-transform: uppercase;
   font-weight: 600;
   color: #e8e8e8;
+  text-shadow: 0 0 10px #000;
 }
 
 .library div:nth-child(odd) {
@@ -174,20 +179,19 @@ header .nav:focus {
 .album {
   min-height: 100vh;
   display: grid;
-  column-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "album-info player-bar"
     "album-info song-list";
+  justify-items: center;
 }
 
 .album-info {
   line-height: 1.5rem;
   grid-area: album-info;
-  align-items: start;
-  justify-content: end;
-  padding-top: 10em;
+  align-self: center;
+  justify-self: center;
 }
 
 #album-cover-art {
@@ -198,6 +202,7 @@ header .nav:focus {
   text-transform: uppercase;
   font-weight: 600;
   color: #e8e8e8;
+  text-shadow: 0 0 5px rgba(33, 33, 33, 0.9);
 }
 
 .artist {
@@ -215,25 +220,37 @@ header .nav:focus {
   grid-area: song-list;
   padding-bottom: 5em;
   align-self: start;
+  margin-top: -100px;
 }
 
 .player-bar {
   grid-area: player-bar;
-  align-self: center;
-  padding-top: 10em;
-  padding-bottom: 0;
+  align-self: end;
+  justify-self: center;
+  padding-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 /* Buttons & Icons */
 
 #button {
   display: grid;
-  padding-left: 50px;
-  grid-template-areas: "play-pause play-pause rewind next";
+  grid-template-areas: "play-pause play-pause previous next";
+  grid-template-columns: 10fr repeat(3, 1fr);
+  width: 100%;
 }
 
 button {
   border-radius: 10%;
+  color: rgb(175, 7, 12);
+  background: rgba(33, 33, 33, 0.4);
+  border: none;
+  width: 35px;
+  height: 35px;
+}
+
+button:hover {
+  background: rgba(33, 33, 33, 0.8);
 }
 
 span {
@@ -243,32 +260,17 @@ span {
 
 #play-pause {
   grid-area: play-pause;
-  color: rgb(175, 7, 12);
-  background: #212121;
-  border: none;
-  width: 35px;
-  height: 35px;
   justify-self: start;
 }
 
 #next {
   grid-area: next;
-  color: rgb(175, 7, 12);
-  background: #212121;
-  border: none;
   justify-self: start;
-  width: 35px;
-  height: 35px;
 }
 
 #previous {
-  grid-area: rewind;
+  grid-area: previous;
   justify-self: end;
-  width: 35px;
-  height: 35px;
-  color: rgb(175, 7, 12);
-  background: #212121;
-  border: none;
 }
 
 /* Time Slider */
@@ -278,9 +280,10 @@ span {
   grid-template-areas:
     "seek-bar seek-bar seek-bar"
     "current-time none total-time";
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
   padding-top: 5px;
-  padding-left: 50px;
-  padding-right: 120px;
+  justify-items: center;
 }
 
 #time-control .seek-bar {
@@ -298,6 +301,7 @@ span {
   justify-self: end;
   margin-top: 5px;
 }
+
 #time-control input {
   appearance: none;
   -webkit-appearance: none;
@@ -305,7 +309,7 @@ span {
   height: 4px;
   border-radius: 10px;
   border-color: 1px solid #ddd;
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 0.4);
   outline: none;
 }
 
@@ -355,7 +359,7 @@ input[type="range"]::-moz-focus-outer {
   width: 125px;
   height: 4px;
   margin-top: -25px;
-  margin-left: 90px;
+  margin-left: 40px;
 }
 
 .ion-md-volume-low {
@@ -370,6 +374,7 @@ input[type="range"]::-moz-focus-outer {
   width: 100%;
   margin-top: 11px;
 }
+
 .ion-md-volume-high {
   grid-area: ion-md-volume-high;
   justify-self: start;
@@ -422,7 +427,6 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin-left: 50px;
   border-collapse: collapse;
 }
 
@@ -446,16 +450,17 @@ table tr:hover {
 
 tbody td:first-of-type {
   padding-left: 10px;
+  text-align: center;
 }
 
 tbody td:nth-child(2) {
-  padding-right: 285px;
-  padding-left: 5px;
+  padding-left: 10px;
   font-weight: bold;
+  width: 375px;
+  text-align: left;
 }
 
 tbody td:last-of-type {
-  padding-left: 50px;
   padding-right: 10px;
 }
 
@@ -493,5 +498,79 @@ tbody td:last-of-type {
     flex-wrap: wrap;
     height: 100%;
     background-size: auto;
+  }
+
+  .album {
+    grid-template-areas:
+      "album-info"
+      "player-bar"
+      "song-list";
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+  }
+
+  .album-info {
+    padding-top: 5rem;
+  }
+
+  #button {
+    grid-template-areas: "play-pause previous next";
+    grid-template-columns: 6fr 1fr 1fr;
+  }
+
+  #song-list {
+    margin-top: -75px;
+  }
+  .player-bar {
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
+
+  #volume-control {
+    margin-left: 40px;
+  }
+
+  table {
+    margin-top: 25px;
+  }
+
+  tbody td:first-of-type {
+    padding-left: 10px;
+  }
+
+  tbody td:nth-child(2) {
+    /* padding-right: 150px; */
+    padding-left: 5px;
+    font-weight: bold;
+    width: 200px;
+  }
+
+  tbody td:last-of-type {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  #album-cover-art {
+    width: 200px;
+  }
+
+  #song-list {
+    margin-top: -75px;
+  }
+
+  #button {
+    grid-template-areas: "play-pause previous next";
+    grid-template-columns: 5fr 1fr 1fr;
+  }
+
+  tbody td:nth-child(2) {
+    padding-left: 5px;
+    font-weight: bold;
+    width: 175px;
   }
 }
